@@ -1,0 +1,1053 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>OAuth token introspection API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="aup-api.html" />
+    
+    
+    <link rel="prev" href="oidc-client-management.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    IAM documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../about.html">
+            
+                <a href="../../about.html">
+            
+                    
+                    The IAM service
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deployment and administration guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../admin-guide/">
+            
+                <a href="../../admin-guide/">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../admin-guide/nginx.html">
+            
+                <a href="../../admin-guide/nginx.html">
+            
+                    
+                    NGINX configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../admin-guide/mariadb.html">
+            
+                <a href="../../admin-guide/mariadb.html">
+            
+                    
+                    Database configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../admin-guide/json_web_key.html">
+            
+                <a href="../../admin-guide/json_web_key.html">
+            
+                    
+                    JSON Web Keys generation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../admin-guide/docker.html">
+            
+                <a href="../../admin-guide/docker.html">
+            
+                    
+                    Deployment with Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../admin-guide/packages.html">
+            
+                <a href="../../admin-guide/packages.html">
+            
+                    
+                    Deployment with packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../../admin-guide/puppet.html">
+            
+                <a href="../../admin-guide/puppet.html">
+            
+                    
+                    Automated provisioning with Puppet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../../admin-guide/basic_conf.html">
+            
+                <a href="../../admin-guide/basic_conf.html">
+            
+                    
+                    Basic IAM setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../../admin-guide/google.html">
+            
+                <a href="../../admin-guide/google.html">
+            
+                    
+                    Enabling Google authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../../admin-guide/saml.html">
+            
+                <a href="../../admin-guide/saml.html">
+            
+                    
+                    Enabling SAML authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html">
+            
+                    
+                    Configuration reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.11.1" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#iam-spring-profiles">
+            
+                    
+                    IAM Spring profiles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.2" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#basic-service-configuration">
+            
+                    
+                    Basic service configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.3" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#database-configuration">
+            
+                    
+                    Database configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.4" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#google-authentication-settings">
+            
+                    
+                    Google authentication settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.5" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#saml-authentication-settings">
+            
+                    
+                    SAML authentication settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.6" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#notification-service-settings">
+            
+                    
+                    Notification service settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.7" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#account-linking-settings">
+            
+                    
+                    Account linking settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="../../admin-guide/audit_log.html">
+            
+                <a href="../../admin-guide/audit_log.html">
+            
+                    
+                    Audit log
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="../../admin-guide/health_endpoints.html">
+            
+                <a href="../../admin-guide/health_endpoints.html">
+            
+                    
+                    Health checks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="../../admin-guide/backup_restore.html">
+            
+                <a href="../../admin-guide/backup_restore.html">
+            
+                    
+                    Backup and restore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="../../admin-guide/upgrade.html">
+            
+                <a href="../../admin-guide/upgrade.html">
+            
+                    
+                    Upgrade
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">User guide</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../client-registration.html">
+            
+                <a href="../client-registration.html">
+            
+                    
+                    Client registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    User Dashboard functionality
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../changing-password.html">
+            
+                <a href="../changing-password.html">
+            
+                    
+                    Changing the account password
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../change-details.html">
+            
+                <a href="../change-details.html">
+            
+                    
+                    Changing the account information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../manage-active-tokens.html">
+            
+                <a href="../manage-active-tokens.html">
+            
+                    
+                    Managing active tokens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../manage-approved-sites.html">
+            
+                <a href="../manage-approved-sites.html">
+            
+                    
+                    Managing approved sites
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../account-linking/ext.html">
+            
+                <a href="../account-linking/ext.html">
+            
+                    
+                    External account linking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="../account-linking/x509.html">
+            
+                <a href="../account-linking/x509.html">
+            
+                    
+                    X.509 certificate linking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../registration-service/">
+            
+                <a href="../registration-service/">
+            
+                    
+                    Registration Service
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../registration-service/submit-request.html">
+            
+                <a href="../registration-service/submit-request.html">
+            
+                    
+                    Submit a request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../registration-service/confirm-request.html">
+            
+                <a href="../registration-service/confirm-request.html">
+            
+                    
+                    Confirm a request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../registration-service/manage-request.html">
+            
+                <a href="../registration-service/manage-request.html">
+            
+                    
+                    Manage registration requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="../registration-service/choosing-password.html">
+            
+                <a href="../registration-service/choosing-password.html">
+            
+                    
+                    Set account password
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="../registration-service/resetting-password.html">
+            
+                <a href="../registration-service/resetting-password.html">
+            
+                    
+                    Reset account password
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../aup/">
+            
+                <a href="../aup/">
+            
+                    
+                    AUP management
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../user-management.html">
+            
+                <a href="../user-management.html">
+            
+                    
+                    User management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="../user-management.html">
+            
+                <a href="../user-management.html#creating-a-user-account">
+            
+                    
+                    Create account
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="../user-management.html">
+            
+                <a href="../user-management.html#deleting-a-user-account">
+            
+                    
+                    Delete account
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.3" data-path="../user-management.html">
+            
+                <a href="../user-management.html#disabling-a-user-account">
+            
+                    
+                    Disable account
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.4" data-path="../user-management.html">
+            
+                <a href="../user-management.html#managing-user-account-privileges">
+            
+                    
+                    Manage account privileges
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.5" data-path="../user-management.html">
+            
+                <a href="../user-management.html#managing-external-user-account-identities">
+            
+                    
+                    Manage account external identities
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../groups_management.html">
+            
+                <a href="../groups_management.html">
+            
+                    
+                    Group Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" data-path="../groups_management.html">
+            
+                <a href="../groups_management.html#creating-a-group">
+            
+                    
+                    Group creation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.2" data-path="../groups_management.html">
+            
+                <a href="../groups_management.html#deleting-a-group">
+            
+                    
+                    Group deletion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.3" data-path="../groups_management.html">
+            
+                <a href="../groups_management.html#managing-membership-for-a-group">
+            
+                    
+                    Group membership management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    IAM APIs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.8.1" data-path="oauth-token-exchange.html">
+            
+                <a href="oauth-token-exchange.html">
+            
+                    
+                    OAuth Token exchange API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.2" data-path="scim-api.html">
+            
+                <a href="scim-api.html">
+            
+                    
+                    SCIM API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.3" data-path="tokens-api.html">
+            
+                <a href="tokens-api.html">
+            
+                    
+                    Token management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.4" data-path="oidc-client-registration.html">
+            
+                <a href="oidc-client-registration.html">
+            
+                    
+                    OpenID Connect client registration APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.5" data-path="oidc-client-management.html">
+            
+                <a href="oidc-client-management.html">
+            
+                    
+                    OpenID Connect client management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.8.6" data-path="oauth-token-introspection.html">
+            
+                <a href="oauth-token-introspection.html">
+            
+                    
+                    OAuth token introspection API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8.7" data-path="aup-api.html">
+            
+                <a href="aup-api.html">
+            
+                    
+                    AUP API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Developer guide</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../developer-guide/">
+            
+                <a href="../../developer-guide/">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >OAuth token introspection API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="oauth-token-introspection-api">OAuth token introspection API</h1>
+<p>IAM, through the <a href="https://github.com/mitreid-connect/OpenID-Connect-Java-Spring-Server/wiki" target="_blank">MitreID OpenID Connect server implementation</a>,
+supports the <a href="https://tools.ietf.org/html/rfc7662" target="_blank">OAuth token introspection API</a> API at
+the <code>/introspect</code> endpoint.</p>
+<p>The <code>/introspect</code> endpoint <strong>requires</strong> client authentication.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="oidc-client-management.html" class="navigation navigation-prev " aria-label="Previous page: OpenID Connect client management API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="aup-api.html" class="navigation navigation-next " aria-label="Next page: AUP API">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"OAuth token introspection API","level":"3.8.6","depth":2,"next":{"title":"AUP API","level":"3.8.7","depth":2,"path":"user-guide/api/aup-api.md","ref":"user-guide/api/aup-api.md","articles":[]},"previous":{"title":"OpenID Connect client management API","level":"3.8.5","depth":2,"path":"user-guide/api/oidc-client-management.md","ref":"user-guide/api/oidc-client-management.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"iamVersion":"v1.2.0"},"plugins":["versions"],"pluginsConfig":{"versions":{"type":"branches","gitbookConfigURL":"https://iam-docs.github.io/v/current/book.json","options":[{"value":"https://iam-docs.github.io/v/v1.2.0/","text":"Version 1.2.0 (current)","selected":true},{"value":"https://iam-docs.github.io/v/v1.1.0/","text":"Version 1.1.0"}]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"user-guide/api/oauth-token-introspection.md","mtime":"2018-02-28T08:27:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-01T08:58:44.509Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

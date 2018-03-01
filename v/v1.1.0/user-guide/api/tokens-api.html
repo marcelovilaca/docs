@@ -1,0 +1,1214 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Token management API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="oidc-client-registration.html" />
+    
+    
+    <link rel="prev" href="scim-api.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    IAM documentation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../about.html">
+            
+                <a href="../../about.html">
+            
+                    
+                    The IAM service
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deployment and administration guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../admin-guide/">
+            
+                <a href="../../admin-guide/">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../admin-guide/nginx.html">
+            
+                <a href="../../admin-guide/nginx.html">
+            
+                    
+                    NGINX configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../admin-guide/mariadb.html">
+            
+                <a href="../../admin-guide/mariadb.html">
+            
+                    
+                    Database configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../admin-guide/json_web_key.html">
+            
+                <a href="../../admin-guide/json_web_key.html">
+            
+                    
+                    JSON Web Keys generation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../admin-guide/docker.html">
+            
+                <a href="../../admin-guide/docker.html">
+            
+                    
+                    Deployment with Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../admin-guide/packages.html">
+            
+                <a href="../../admin-guide/packages.html">
+            
+                    
+                    Deployment with packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../../admin-guide/puppet.html">
+            
+                <a href="../../admin-guide/puppet.html">
+            
+                    
+                    Automated provisioning with Puppet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../../admin-guide/basic_conf.html">
+            
+                <a href="../../admin-guide/basic_conf.html">
+            
+                    
+                    Basic IAM setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../../admin-guide/google.html">
+            
+                <a href="../../admin-guide/google.html">
+            
+                    
+                    Enabling Google authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../../admin-guide/saml.html">
+            
+                <a href="../../admin-guide/saml.html">
+            
+                    
+                    Enabling SAML authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html">
+            
+                    
+                    Configuration reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.11.1" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#iam-spring-profiles">
+            
+                    
+                    IAM Spring profiles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.2" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#basic-service-configuration">
+            
+                    
+                    Basic service configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.3" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#database-configuration">
+            
+                    
+                    Database configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.4" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#google-authentication-settings">
+            
+                    
+                    Google authentication settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.5" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#saml-authentication-settings">
+            
+                    
+                    SAML authentication settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.6" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#notification-service-settings">
+            
+                    
+                    Notification service settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11.7" data-path="../../admin-guide/configuration_reference.html">
+            
+                <a href="../../admin-guide/configuration_reference.html#account-linking-settings">
+            
+                    
+                    Account linking settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="../../admin-guide/audit_log.html">
+            
+                <a href="../../admin-guide/audit_log.html">
+            
+                    
+                    Audit log
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="../../admin-guide/health_endpoints.html">
+            
+                <a href="../../admin-guide/health_endpoints.html">
+            
+                    
+                    Health checks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">User guide</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../client-registration.html">
+            
+                <a href="../client-registration.html">
+            
+                    
+                    Client registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    User Dashboard functionality
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../changing-password.html">
+            
+                <a href="../changing-password.html">
+            
+                    
+                    Changing the account password
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../change-details.html">
+            
+                <a href="../change-details.html">
+            
+                    
+                    Changing the account information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../manage-active-tokens.html">
+            
+                <a href="../manage-active-tokens.html">
+            
+                    
+                    Managing active tokens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../manage-approved-sites.html">
+            
+                <a href="../manage-approved-sites.html">
+            
+                    
+                    Managing approved sites
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../account-linking/ext.html">
+            
+                <a href="../account-linking/ext.html">
+            
+                    
+                    External account linking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="../account-linking/x509.html">
+            
+                <a href="../account-linking/x509.html">
+            
+                    
+                    X.509 certificate linking
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../registration-service/">
+            
+                <a href="../registration-service/">
+            
+                    
+                    Registration Service
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../registration-service/submit-request.html">
+            
+                <a href="../registration-service/submit-request.html">
+            
+                    
+                    Submit a request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../registration-service/confirm-request.html">
+            
+                <a href="../registration-service/confirm-request.html">
+            
+                    
+                    Confirm a request
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../registration-service/manage-request.html">
+            
+                <a href="../registration-service/manage-request.html">
+            
+                    
+                    Manage registration requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="../registration-service/choosing-password.html">
+            
+                <a href="../registration-service/choosing-password.html">
+            
+                    
+                    Set account password
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="../registration-service/resetting-password.html">
+            
+                <a href="../registration-service/resetting-password.html">
+            
+                    
+                    Reset account password
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../user-management.html">
+            
+                <a href="../user-management.html">
+            
+                    
+                    User management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.5.1" data-path="../user-management.html">
+            
+                <a href="../user-management.html#creating-a-user-account">
+            
+                    
+                    User creation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.2" data-path="../user-management.html">
+            
+                <a href="../user-management.html#creating-a-user">
+            
+                    
+                    User deletion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.3" data-path="../user-management.html">
+            
+                <a href="../user-management.html#managing-user-privileges">
+            
+                    
+                    Managing user privileges
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5.4" data-path="../user-management.html">
+            
+                <a href="../user-management.html#managing-external-user-identities">
+            
+                    
+                    Managing external identities
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../groups_management.html">
+            
+                <a href="../groups_management.html">
+            
+                    
+                    Group Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="../groups_management.html">
+            
+                <a href="../groups_management.html#creating-a-group">
+            
+                    
+                    Group creation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="../groups_management.html">
+            
+                <a href="../groups_management.html#deleting-a-group">
+            
+                    
+                    Group deletion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.3" data-path="../groups_management.html">
+            
+                <a href="../groups_management.html#managing-membership-for-a-group">
+            
+                    
+                    Group membership management
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    IAM APIs
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.7.1" data-path="oauth-token-exchange.html">
+            
+                <a href="oauth-token-exchange.html">
+            
+                    
+                    OAuth Token exchange API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.2" data-path="scim-api.html">
+            
+                <a href="scim-api.html">
+            
+                    
+                    SCIM API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.7.3" data-path="tokens-api.html">
+            
+                <a href="tokens-api.html">
+            
+                    
+                    Token management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.4" data-path="oidc-client-registration.html">
+            
+                <a href="oidc-client-registration.html">
+            
+                    
+                    OpenID Connect client registration APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.5" data-path="oidc-client-management.html">
+            
+                <a href="oidc-client-management.html">
+            
+                    
+                    OpenID Connect client management API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7.6" data-path="oauth-token-introspection.html">
+            
+                <a href="oauth-token-introspection.html">
+            
+                    
+                    OAuth token introspection API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Developer guide</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../developer-guide/">
+            
+                <a href="../../developer-guide/">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Token management API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="token-management-api">Token management API</h1>
+<p>The IAM server has a RESTful API used to list and revoke active access and
+refresh tokens.</p>
+<p>Access to the API is limited to users with administrator privileges (either
+authenticated via a web session or through OAuth). All examples assume
+authorization via OAuth2 bearer token; e.g.</p>
+<pre><code>GET /access-tokens/13 HTTP/1.1
+Host: example.com
+Authorization: Bearer h480djs93hd8
+</code></pre><p>These are the tokens REST API endpoints:</p>
+<p><strong>Accessing tokens</strong>:</p>
+<ul>
+<li><a href="#get-access-tokens">GET /access-tokens</a></li>
+<li><a href="#get-access-tokensid">GET /access-tokens/:id</a></li>
+<li><a href="#get-refresh-tokens">GET /refresh-tokens</a></li>
+<li><a href="#get-refresh-tokensid">GET /refresh-tokens/:id</a></li>
+</ul>
+<p><strong>Deleting tokens</strong>:</p>
+<ul>
+<li><a href="#delete-access-tokensid">DELETE /access-tokens/:id</a></li>
+<li><a href="#delete-refresh-tokensid">DELETE /refresh-tokens/:id</a></li>
+</ul>
+<h2 id="get-access-tokens">GET /access-tokens</h2>
+<p>Retrieves the paginated list of all the active access tokens. Returns results in <em>application/json</em>.</p>
+<p>Requires <strong>ROLE_ADMIN</strong>.</p>
+<p>Parameters:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>count</code><br><strong>integer</strong></td>
+<td>Specifies the desired maximum number of query results per page.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>startIndex</code><br><strong>integer</strong></td>
+<td>The 1-based index of the first query result.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>userId</code><br><strong>string</strong></td>
+<td>Filters by userId.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>clientId</code><br><strong>string</strong></td>
+<td>Filters by clientId.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code>GET http://example.com:8080/access-tokens
+</code></pre><pre><code class="lang-json">{
+  <span class="hljs-string">&quot;totalResults&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;itemsPerPage&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;startIndex&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;resources&quot;</span>: [
+    {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">6</span>,
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0MDEzMTQ1MjksImF1ZCI6WyJhOGFmNzUzYy1mMzI0LTRlNDAtYTE3Ny04N2RmYzA2MjQ5YjciXSwiaXNzIjoiaHR0cDpcL1wvbG9jYWxob3N0OjgwODBcL29wZW5pZC1jb25uZWN0LXNlcnZlci13ZWJhcHBcLyIsImp0aSI6Ijg4ZjM4OGE4LTk1NzctNGQyMC1hZTZjLWMyMDMxOGQ1OWJjNiIsImlhdCI6MTQwMTMxMDkyOX0.HYnNxRvGRdKFykVChL-hdxszcFBvygkeUmc8_iv2Jl4MU-jPJVzMnTwKJbCMWBjeBp8hrb0Dgd9XbnHUDyXxwj8MDrWQEH3QnwYJGRW9JFWjHMGfKDQDFY6Ffl3OFERVbyoB2ObiGTUgbw4Nkl1L1ihuMpMAc5nKi0rk3QXcS1M&quot;</span>,
+      <span class="hljs-string">&quot;scopes&quot;</span>: [
+        <span class="hljs-string">&quot;openid&quot;</span>,
+        <span class="hljs-string">&quot;phone&quot;</span>,
+        <span class="hljs-string">&quot;email&quot;</span>,
+        <span class="hljs-string">&quot;address&quot;</span>,
+        <span class="hljs-string">&quot;profile&quot;</span>
+      ],
+      <span class="hljs-string">&quot;expiration&quot;</span>: <span class="hljs-string">&quot;2014-05-28T18:02:09-0400&quot;</span>,
+      <span class="hljs-string">&quot;client&quot;</span>: {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-string">&quot;clientId&quot;</span>: <span class="hljs-string">&quot;iam-test-client&quot;</span>,
+        <span class="hljs-string">&quot;contacts&quot;</span>: [
+          <span class="hljs-string">&quot;andrea.ceccanti@cnaf.infn.it&quot;</span>
+        ],
+        <span class="hljs-string">&quot;ref&quot;</span>: <span class="hljs-string">&quot;https://iam-test.indigo-datacloud.eu/api/clients/2&quot;</span>
+      },
+      <span class="hljs-string">&quot;user&quot;</span>: {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;e1eb758b-b73c-4761-bfff-adc793da409c&quot;</span>,
+        <span class="hljs-string">&quot;userName&quot;</span>: <span class="hljs-string">&quot;andrea&quot;</span>,
+        <span class="hljs-string">&quot;ref&quot;</span>: <span class="hljs-string">&quot;https://iam-test.indigo-datacloud.eu/scim/Users/e1eb758b-b73c-4761-bfff-adc793da409c&quot;</span>
+      },
+      <span class="hljs-string">&quot;idToken&quot;</span>: {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">5</span>,
+        <span class="hljs-string">&quot;ref&quot;</span>: <span class="hljs-string">&quot;https://iam-test.indigo-datacloud.eu/access-tokens/5&quot;</span>
+      }
+    }
+  ]
+}
+</code></pre>
+<h2 id="get-access-tokensid">GET /access-tokens/:id</h2>
+<p>Retrieves all the information about the access token identified by <strong>id</strong> and returns results in <em>application/json</em>.</p>
+<p>Requires <strong>ROLE_ADMIN</strong>.</p>
+<pre><code>GET http://example.com:8080/access-tokens/6
+</code></pre><pre><code class="lang-json">{
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">6</span>,
+  <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;eyJhbGciOiJSUzI1NiJ9.eyJleHAiOjE0MDEzMTQ1MjksImF1ZCI6WyJhOGFmNzUzYy1mMzI0LTRlNDAtYTE3Ny04N2RmYzA2MjQ5YjciXSwiaXNzIjoiaHR0cDpcL1wvbG9jYWxob3N0OjgwODBcL29wZW5pZC1jb25uZWN0LXNlcnZlci13ZWJhcHBcLyIsImp0aSI6Ijg4ZjM4OGE4LTk1NzctNGQyMC1hZTZjLWMyMDMxOGQ1OWJjNiIsImlhdCI6MTQwMTMxMDkyOX0.HYnNxRvGRdKFykVChL-hdxszcFBvygkeUmc8_iv2Jl4MU-jPJVzMnTwKJbCMWBjeBp8hrb0Dgd9XbnHUDyXxwj8MDrWQEH3QnwYJGRW9JFWjHMGfKDQDFY6Ffl3OFERVbyoB2ObiGTUgbw4Nkl1L1ihuMpMAc5nKi0rk3QXcS1M&quot;</span>,
+  <span class="hljs-string">&quot;scopes&quot;</span>: [
+    <span class="hljs-string">&quot;openid&quot;</span>,
+    <span class="hljs-string">&quot;phone&quot;</span>,
+    <span class="hljs-string">&quot;email&quot;</span>,
+    <span class="hljs-string">&quot;address&quot;</span>,
+    <span class="hljs-string">&quot;profile&quot;</span>
+  ],
+  <span class="hljs-string">&quot;expiration&quot;</span>: <span class="hljs-string">&quot;2014-05-28T18:02:09-0400&quot;</span>,
+  <span class="hljs-string">&quot;client&quot;</span>: {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-string">&quot;clientId&quot;</span>: <span class="hljs-string">&quot;iam-test-client&quot;</span>,
+    <span class="hljs-string">&quot;contacts&quot;</span>: [
+      <span class="hljs-string">&quot;andrea.ceccanti@cnaf.infn.it&quot;</span>
+    ],
+    <span class="hljs-string">&quot;ref&quot;</span>: <span class="hljs-string">&quot;https://iam-test.indigo-datacloud.eu/api/clients/2&quot;</span>
+  },
+  <span class="hljs-string">&quot;user&quot;</span>: {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;e1eb758b-b73c-4761-bfff-adc793da409c&quot;</span>,
+    <span class="hljs-string">&quot;userName&quot;</span>: <span class="hljs-string">&quot;andrea&quot;</span>,
+    <span class="hljs-string">&quot;ref&quot;</span>: <span class="hljs-string">&quot;https://iam-test.indigo-datacloud.eu/scim/Users/e1eb758b-b73c-4761-bfff-adc793da409c&quot;</span>
+  },
+  <span class="hljs-string">&quot;idToken&quot;</span>: {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-string">&quot;ref&quot;</span>: <span class="hljs-string">&quot;https://iam-test.indigo-datacloud.eu/access-tokens/5&quot;</span>
+  }
+}
+</code></pre>
+<h2 id="get-refresh-tokens">GET /refresh-tokens</h2>
+<p>Retrieves the paginated list of all the active refresh tokens. Returns results in <em>application/json</em>.</p>
+<p>Requires <strong>ROLE_ADMIN</strong>.</p>
+<p>Parameters:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>count</code><br><strong>integer</strong></td>
+<td>Specifies the desired maximum number of query results per page.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>startIndex</code><br><strong>integer</strong></td>
+<td>The 1-based index of the first query result.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>userId</code><br><strong>string</strong></td>
+<td>Filters by userId.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>clientId</code><br><strong>string</strong></td>
+<td>Filters by clientId.</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code>GET http://example.com:8080/refresh-tokens
+</code></pre><pre><code class="lang-json">{
+  <span class="hljs-string">&quot;totalResults&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;itemsPerPage&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;startIndex&quot;</span>: <span class="hljs-number">1</span>,
+  <span class="hljs-string">&quot;resources&quot;</span>: [
+       {
+      <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1083</span>,
+      <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;eyJhbGciOiJub25lIn0.eyJqdGkiOiIxMTdmMWRkOS1iOWViLTQ5MjctYThkMS1hYzQ4NjIwYWQzOWYifQ.&quot;</span>,
+      <span class="hljs-string">&quot;scopes&quot;</span>: [
+        <span class="hljs-string">&quot;openid&quot;</span>,
+        <span class="hljs-string">&quot;phone&quot;</span>,
+        <span class="hljs-string">&quot;email&quot;</span>,
+        <span class="hljs-string">&quot;address&quot;</span>,
+        <span class="hljs-string">&quot;profile&quot;</span>
+      ],
+      <span class="hljs-string">&quot;expiration&quot;</span>: <span class="hljs-string">&quot;2014-05-28T18:02:09-0400&quot;</span>,
+      <span class="hljs-string">&quot;client&quot;</span>: {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-string">&quot;clientId&quot;</span>: <span class="hljs-string">&quot;iam-test-client&quot;</span>,
+        <span class="hljs-string">&quot;contacts&quot;</span>: [
+          <span class="hljs-string">&quot;andrea.ceccanti@cnaf.infn.it&quot;</span>
+        ],
+        <span class="hljs-string">&quot;ref&quot;</span>: <span class="hljs-string">&quot;https://iam-test.indigo-datacloud.eu/api/clients/2&quot;</span>
+      },
+      <span class="hljs-string">&quot;user&quot;</span>: {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;e1eb758b-b73c-4761-bfff-adc793da409c&quot;</span>,
+        <span class="hljs-string">&quot;userName&quot;</span>: <span class="hljs-string">&quot;andrea&quot;</span>,
+        <span class="hljs-string">&quot;ref&quot;</span>: <span class="hljs-string">&quot;https://iam-test.indigo-datacloud.eu/scim/Users/e1eb758b-b73c-4761-bfff-adc793da409c&quot;</span>
+      }
+    }
+  ]
+}
+</code></pre>
+<h2 id="get-refresh-tokensid">GET /refresh-tokens/:id</h2>
+<p>Retrieves all the information about the refresh token identified by <strong>id</strong> and returns results in <em>application/json</em>.</p>
+<p>Requires <strong>ROLE_ADMIN</strong>.</p>
+<pre><code>GET http://example.com:8080/refresh-tokens/1083
+</code></pre><pre><code class="lang-json">{
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1083</span>,
+  <span class="hljs-string">&quot;value&quot;</span>: <span class="hljs-string">&quot;eyJhbGciOiJub25lIn0.eyJqdGkiOiIxMTdmMWRkOS1iOWViLTQ5MjctYThkMS1hYzQ4NjIwYWQzOWYifQ.&quot;</span>,
+  <span class="hljs-string">&quot;scopes&quot;</span>: [
+    <span class="hljs-string">&quot;openid&quot;</span>,
+    <span class="hljs-string">&quot;phone&quot;</span>,
+    <span class="hljs-string">&quot;email&quot;</span>,
+    <span class="hljs-string">&quot;address&quot;</span>,
+    <span class="hljs-string">&quot;profile&quot;</span>
+  ],
+  <span class="hljs-string">&quot;expiration&quot;</span>: <span class="hljs-string">&quot;2014-05-28T18:02:09-0400&quot;</span>,
+  <span class="hljs-string">&quot;client&quot;</span>: {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-string">&quot;clientId&quot;</span>: <span class="hljs-string">&quot;iam-test-client&quot;</span>,
+    <span class="hljs-string">&quot;contacts&quot;</span>: [
+      <span class="hljs-string">&quot;andrea.ceccanti@cnaf.infn.it&quot;</span>
+    ],
+    <span class="hljs-string">&quot;ref&quot;</span>: <span class="hljs-string">&quot;https://iam-test.indigo-datacloud.eu/api/clients/2&quot;</span>
+  },
+  <span class="hljs-string">&quot;user&quot;</span>: {
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;e1eb758b-b73c-4761-bfff-adc793da409c&quot;</span>,
+    <span class="hljs-string">&quot;userName&quot;</span>: <span class="hljs-string">&quot;andrea&quot;</span>,
+    <span class="hljs-string">&quot;ref&quot;</span>: <span class="hljs-string">&quot;https://iam-test.indigo-datacloud.eu/scim/Users/e1eb758b-b73c-4761-bfff-adc793da409c&quot;</span>
+  }
+}
+</code></pre>
+<h2 id="delete-access-tokensid">DELETE /access-tokens/:id</h2>
+<p>Revoke the access token identified by <strong>id</strong>.</p>
+<p>Requires <strong>ROLE_ADMIN</strong>.</p>
+<pre><code>DELETE http://example.com:8080/access-tokens/6
+</code></pre><pre><code>204  AccessToken revoked
+</code></pre><h2 id="delete-refresh-tokensid">DELETE /refresh-tokens/:id</h2>
+<p>Revoke the access token identified by <strong>id</strong>.</p>
+<p>Requires <strong>ROLE_ADMIN</strong>.</p>
+<pre><code>DELETE http://example.com:8080/refresh-tokens/1083
+</code></pre><pre><code>204  RefreshToken revoked
+</code></pre><p>More details can be read at the <a href="tokens_api/index.html">complete API Reference</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="scim-api.html" class="navigation navigation-prev " aria-label="Previous page: SCIM API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="oidc-client-registration.html" class="navigation navigation-next " aria-label="Next page: OpenID Connect client registration APIs">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Token management API","level":"3.7.3","depth":2,"next":{"title":"OpenID Connect client registration APIs","level":"3.7.4","depth":2,"path":"user-guide/api/oidc-client-registration.md","ref":"user-guide/api/oidc-client-registration.md","articles":[]},"previous":{"title":"SCIM API","level":"3.7.2","depth":2,"path":"user-guide/api/scim-api.md","ref":"user-guide/api/scim-api.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"iamVersion":"v1.1.0"},"plugins":["versions"],"pluginsConfig":{"versions":{"type":"branches","gitbookConfigURL":"https://iam-docs.github.io/v/current/book.json","options":[{"value":"https://iam-docs.github.io/v/v1.1.0/","text":"Version 1.1.0","selected":true}]},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"user-guide/api/tokens-api.md","mtime":"2018-02-28T08:27:35.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-01T09:01:25.243Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

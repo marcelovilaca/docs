@@ -1,0 +1,18 @@
+{
+		"plugins": ["versions"],
+		"pluginsConfig": {
+				"versions": {
+						"gitbookConfigURL": "https://iam-docs.github.io/v/current/book.json",
+						"options": [
+								{
+										"value": "https://iam-docs.github.io/v/v1.1.0/",
+										"text": "Version 1.1.0",
+										"selected": true
+								}
+						]
+				}
+		},
+		"variables": {
+				"iamVersion": "v1.1.0"
+		}
+}
