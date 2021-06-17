@@ -1,5 +1,5 @@
 ---
 title: IAM documentation
 redirect_to:
-  - v/current
+  - v/CNSD-157 
 ---
